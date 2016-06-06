@@ -1,0 +1,8 @@
+-e .
+
+bumpversion
+flake8
+coverage
+coveralls
+pytest
+wheel>=0.23.0
