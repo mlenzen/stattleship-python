@@ -2,6 +2,8 @@
 
 bumpversion
 flake8
+flake8-docstrings
+pep8-naming
 coverage
 coveralls
 pytest
