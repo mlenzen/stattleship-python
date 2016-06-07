@@ -25,7 +25,7 @@ clean:
 	find . -name __pycache__ -delete
 
 lint:
-	flake8 stattlepy tests
+	flake8 --statistics --count
 
 coverage:
 	coverage run --source stattlepy setup.py test
