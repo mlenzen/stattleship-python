@@ -1,7 +1,7 @@
 """stattlepy - Implement Stattleship API.
 
 Install:
-	pip install git+https://github.org/mlenzen/stattleship-python#egg=stattlepy
+	pip install git+https://github.com/mlenzen/stattleship-python.git
 
 Usage:
 	import stattlepy

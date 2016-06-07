@@ -10,7 +10,7 @@ API.
 Installation
 ============
 
-``pip install git+https://github.org/mlenzen/stattleship-python#egg=stattlepy``
+``pip install git+https://github.com/mlenzen/stattleship-python.git``
 
 Usage
 =====
@@ -39,7 +39,7 @@ Logging is done through the logging module, so if you want to see messages:
 
 .. code:: python
 
-  >>> import logging
+	>>> import logging
 	>>> logging.basicConfig()
 	>>> ...
 
