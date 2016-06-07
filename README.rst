@@ -1,41 +1,47 @@
 README
 ######
 
-.. image:: https://travis-ci.org/mlenzen/stattleship-python.svg?branch=master
-	:target: https://travis-ci.org/mlenzen/stattleship-python
-	:alt: Build Status
+This package includes one module ``stattlepy`` for accessing the Stattleship
+API.
 
-
-.. image:: https://coveralls.io/repos/mlenzen/stattleship-python/badge.svg?branch=master
-	:target: https://coveralls.io/r/mlenzen/stattleship-python?branch=master
-	:alt: Coverage
-
-
-Overview
-========
-
-This package includes one module - ``stattlepy``.
-
-Tested against Python 2.7, 3.3, 3.4, 3.5, PyPy & PyPy3.
-
-Getting Started
-===============
-
-.. code:: python
-
-	 >>> import stattlepy
+:Stattleship Homepage: https://www.stattleship.com/
+:API Docs: http://developers.stattleship.com/
 
 Installation
 ============
 
-``pip install stattlepy``
+``pip install git+https://github.org/mlenzen/stattleship-python#egg=stattlepy``
 
 Usage
 =====
-	``import stattlepy``
+.. code:: python
 
-Features
-========
+	>>> import stattlepy
+	>>> stattle = stattlepy.Stattleship('your_token')
+	>>> stattle.get('hockey', 'nhl', 'teams')
+	...
+
+Instead of passing the token to Stattleship __init__ you can set an environment
+variable.
+
+.. code:: sh
+
+	$ STATTLESHIP_TOKEN='your_token' command
+	$ python
+
+.. code:: python
+
+	>>> import stattlepy
+	>>> stattle = stattlepy.Stattleship()
+	>>> ...
+
+Logging is done through the logging module, so if you want to see messages:
+
+.. code:: python
+
+  >>> import logging
+	>>> logging.basicConfig()
+	>>> ...
 
 :Author: Michael Lenzen
 :Copyright: 2016 Michael Lenzen

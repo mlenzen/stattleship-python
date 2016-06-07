@@ -1,4 +1,4 @@
-.PHONY: docs test
+.PHONY: help tests testall clean lint coverage publish
 
 help:
 	@echo "  clean       remove unwanted files like .pyc's"
@@ -33,6 +33,6 @@ coverage:
 	coverage html
 	open htmlcov/index.html
 
-publish:
+publish: testall lint
 	python setup.py sdist upload
 	python setup.py bdist_wheel upload
