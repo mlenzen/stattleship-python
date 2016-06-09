@@ -24,7 +24,7 @@ setup(
 	author_email='m.lenzen@gmail.com',
 	license='MIT',
 	url='https://github.com/mlenzen/stattleship-python',
-	packages=['stattlepy'],
+	py_modules=['stattlepy'],
 	include_package_data=True,
 	zip_safe=False,
 	package_data={
