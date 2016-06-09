@@ -26,7 +26,7 @@ variable.
 
 .. code:: sh
 
-	$ STATTLESHIP_TOKEN='your_token' command
+	$ export STATTLESHIP_TOKEN='your_token'
 	$ python
 
 .. code:: python

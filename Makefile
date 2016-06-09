@@ -1,19 +1,10 @@
-.PHONY: help tests testall clean lint coverage publish
+.PHONY: help clean lint publish
 
 help:
 	@echo "  clean       remove unwanted files like .pyc's"
 	@echo "  lint        check style with flake8"
-	@echo "  tests       run tests (using py.test)"
-	@echo "  testall     run tests for all Python versions (using tox)"
-	@echo "  coverage    run coverage report"
 	@echo "  publish     publish to PyPI"
 	@echo "  docs        create HMTL docs (using Sphinx)"
-
-tests:
-	python setup.py test
-
-testall:
-	tox
 
 clean:
 	rm -rf build
@@ -27,12 +18,6 @@ clean:
 lint:
 	flake8 --statistics --count
 
-coverage:
-	coverage run --source stattlepy setup.py test
-	coverage report -m
-	coverage html
-	open htmlcov/index.html
-
-publish: testall lint
+publish: lint
 	python setup.py sdist upload
 	python setup.py bdist_wheel upload
